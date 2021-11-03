@@ -130,10 +130,7 @@ Use the getFlavorByIndex function below to do the following:
 
 //2 parameters array / number (holding the place for an index)
 function getFlavorByIndex(array, number){
-  // array[number];
   return array[number];
-  
-  //array[0]
 }
 
 console.log('task 5', getFlavorByIndex(originalFlavors, 2));
@@ -154,14 +151,19 @@ Use the removeFlavorByName function below to do the following:
 */
 
 //2 params array and the string we want to remove
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array, string){
+  
   //loop through array and check every index for the exact match of the string. if it exists then remove it using splice
   // .splice (start, how many items to delete)
-
+  for (let i = 0; i < array.length; i++){
+    if(array[i] === string){
+      array.splice(i,1);
+    }
+  }
+  return array;
   //return array outside of the loop
 }
-
+console.log('task 6', removeFlavorByName(originalFlavors, "Rocky Road"));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
