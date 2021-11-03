@@ -108,12 +108,9 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-//1 parameter which will be a place holder for the array
 function removeLastFlavor(array){
   array.pop();
   return array;
- //use .pop to remove the last item
- //return the array
 }
 
 console.log('task 4', removeLastFlavor(originalFlavors));
@@ -124,19 +121,22 @@ console.log('task 4', removeLastFlavor(originalFlavors));
 Write a function that returns a flavor at a given index in the array.
 
 Use the getFlavorByIndex function below to do the following:
-  1. Recieve an array
+  1. Receive an array
   2. Receive a number (the desired index)
   3. Return the flavor located at the received index position
 
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-//2 parameteres array / number (holding the place for an index)
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+//2 parameters array / number (holding the place for an index)
+function getFlavorByIndex(array, number){
+  // array[number];
+  return array[number];
+  
   //array[0]
 }
 
+console.log('task 5', getFlavorByIndex(originalFlavors, 2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
