@@ -72,7 +72,6 @@ function is31Flavors(array){
  } else {
    return false;
  }
- //conditional inside here - it should be exactly 31 items
 }
 
 console.log('task 2', is31Flavors(originalFlavors));
@@ -90,11 +89,14 @@ Use the addFlavor function below to do the following:
 */
 
 //2 params array, string (which is holding the place for the new flavour)
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(array, string){
+  array.unshift(string);
+  return array;
  //use unshift to add new flavour
  //return the array
 }
+
+console.log('task 3', addFlavor(originalFlavors, "Rainbow Sherbert"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
