@@ -46,8 +46,10 @@ Use the copy function below to do the following:
 */
 
 function copy(array){
-  /*your code here*/
+  return [...array];
 }    
+
+console.log('task 1', copy(originalFlavors));
 
 
 
@@ -64,10 +66,16 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
- /*your code here*/
+function is31Flavors(array){
+ if (array.length === 31){
+   return true;
+ } else {
+   return false;
+ }
  //conditional inside here - it should be exactly 31 items
 }
+
+console.log('task 2', is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -184,7 +192,7 @@ function filterByWord(array, string){
     }
   }
   return filtered;
-  //loop through the proivded array and check every index
+  //loop through the provided array and check every index
   //if the index includes teh string, push it to the new array
   //return it outside of the array
 }
