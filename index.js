@@ -88,12 +88,10 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-//2 params array, string (which is holding the place for the new flavour)
 function addFlavor(array, string){
   array.unshift(string);
   return array;
- //use unshift to add new flavour
- //return the array
+
 }
 
 console.log('task 3', addFlavor(originalFlavors, "Rainbow Sherbert"));
@@ -111,11 +109,14 @@ Use the removeLastFlavor function below to do the following:
 */
 
 //1 parameter which will be a place holder for the array
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(array){
+  array.pop();
+  return array;
  //use .pop to remove the last item
  //return the array
 }
+
+console.log('task 4', removeLastFlavor(originalFlavors));
 
 
 
