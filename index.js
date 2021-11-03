@@ -45,7 +45,7 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
+function copy(array){
   /*your code here*/
 }    
 
@@ -66,6 +66,7 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 function is31Flavors(/*your code here*/){
  /*your code here*/
+ //conditional inside here - it should be exactly 31 items
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -80,9 +81,11 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-
+//2 params array, string (which is holding the place for the new flavour)
 function addFlavor(/*your code here*/){
  /*your code here*/
+ //use unshift to add new flavour
+ //return the array
 }
 
 
@@ -97,8 +100,11 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
+//1 parameter which will be a place holder for the array
 function removeLastFlavor(/*your code here*/){
  /*your code here*/
+ //use .pop to remove the last item
+ //return the array
 }
 
 
@@ -114,8 +120,10 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
+//2 parameteres array / number (holding the place for an index)
 function getFlavorByIndex(/*your code here*/){
   /*your code here*/
+  //array[0]
 }
 
 
@@ -134,8 +142,13 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
+//2 params array and the string we want to remove
 function removeFlavorByName(/*your code here*/){
   /*your code here*/
+  //loop through array and check every index for the exact match of the string. if it exists then remove it using splice
+  // .splice (start, how many items to delete)
+
+  //return array outside of the loop
 }
 
 
@@ -160,10 +173,23 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+// 2 params - array / string
+function filterByWord(array, string){
+
+  const filtered = [];
+
+  for (let i = 0; i < array.length; i++){
+    if(array[i].includes(string)){
+      filtered.push(array[i]);
+    }
+  }
+  return filtered;
+  //loop through the proivded array and check every index
+  //if the index includes teh string, push it to the new array
+  //return it outside of the array
 }
 
+console.log('task 7', filterByWord(originalFlavors, 'Chocolate'));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
